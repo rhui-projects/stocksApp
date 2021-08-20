@@ -1,3 +1,11 @@
+'''
+Script:       historical_stock_generation.py
+Author:       Ryan Hui
+Description:  This script is used to download historical stock data from companies within NASDAQ.
+              All historical data are stored in the data folder as csv files.
+              
+'''
+
 from ftplib import FTP
 import subprocess
 from time import time, sleep

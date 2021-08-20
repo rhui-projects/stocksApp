@@ -6,14 +6,7 @@
 	],
 	"settings": {
 		"git.ignoreLimitWarning": true,
-		"sqltools.connections": [
-			{
-				"previewLimit": 50,
-				"driver": "SQLite",
-				"name": "stocks",
-				"database": "${workspaceFolder:portfolio}/db.sqlite3"
-			}
-		],
+		"sqltools.connections": [],
 		"sqltools.useNodeRuntime": true
 	}
 }
