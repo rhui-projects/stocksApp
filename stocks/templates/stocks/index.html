@@ -1,0 +1,26 @@
+<!--
+{% if first_symbols %}
+<h1> First Ten Symbols</h1>
+    <ul>
+        {% for symbol in first_symbols %}
+            <li>{{ symbol }} </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No symbols are available.</p>
+{% endif %}
+-->
+{% if first_stocks %}
+<h1> First Ten Stocks</h1>
+    <ul>
+        {% for stock in first_stocks %}
+            <li>{{ stock }} </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No stocks are available.</p>
+{% endif %}
+
+{% if dir %}
+    <p>dir: {{ dir }}</p>
+{% endif %}

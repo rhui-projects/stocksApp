@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Symbol(models.Model):
-  symbol = models.CharField(max_length=10)
+  symbol = models.CharField(max_length=10,unique=True)
   security = models.CharField(max_length=100)
   market = models.CharField(max_length=1)
   test = models.CharField(max_length=1)
@@ -15,7 +15,8 @@ class Symbol(models.Model):
     return self.symbol
 
 class Stock(models.Model):
-  symbol = models.ForeignKey(Symbol, on_delete=models.CASCADE)
+  stock_id = models.AutoField(primary_key=True)
+  symbol = models.CharField(max_length=8)
   date = models.DateTimeField('Date')
   stock_open = models.DecimalField('Open',decimal_places=6,max_digits=10)
   stock_high = models.DecimalField('High',decimal_places=6,max_digits=10)
@@ -25,6 +26,6 @@ class Stock(models.Model):
   volume = models.BigIntegerField(db_column='Volume')
 
   def __str__(self):
-    return self.symbol
+    return self.symbol + ' | ' + str(self.date)
   
 
