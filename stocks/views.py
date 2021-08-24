@@ -1,4 +1,5 @@
 import csv, os, subprocess
+import matplotlib
 
 from django.shortcuts import render
 from django.http import HttpResponse
